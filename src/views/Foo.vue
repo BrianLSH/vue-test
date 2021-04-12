@@ -20,16 +20,20 @@
       </p>
 
       <div>
-        <p>我是通多计算属性变化=====》{{ showData }}</p>
+        <p>我是通多计算属性变化1=====》{{ showData }}</p>
       </div>
 
       <div>
         <p>我是通多getter获取的=====》{{ $store.getters.getDataByGetters }}</p>
+        <p>我是通多mapGetter获取的=====》{{ getDataByGetters }}</p>
+        <p>我是通多mapGetter获取的=====》{{ findUserById(1) }}</p>
+        <p>我是通多Getter获取的=====》{{ $store.getters.findUserById(2) }}</p>
+        <p>通过让 getter 返回一个函数，来实现给 getter 传参在你对 store 里的数组进行查询时非常有用》{{ name }}</p>
       </div>
       <div>
-        <p>我是通多mapState数组获取的=====》{{ counts }}</p>
-         <p>我是通多mapState对象获取的=====》{{ counting }}</p>
-           <p>我是通多mapState对象获取的=====》{{ totalCount }}</p>
+        <p>我是通多mapState数组获取的 映射到计算属性=====》{{ counts }}</p>
+        <p>我是通多mapState对象获取的=====》{{ counting }}</p>
+        <p>我是通多mapState对象获取的 映射到计算属性=====》{{ totalCount }}</p>
       </div>
 
       <div>
@@ -41,12 +45,13 @@
 
 <script>
 // console.log(this.$store.state.count)
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'foo',
   data () {
     return {
-      num: 1
+      num: 1,
+      name: ''
     }
   },
   methods: {
@@ -61,6 +66,10 @@ export default {
 
     addNum () {
       this.$store.commit('add', 2)
+    },
+    getName () {
+      const { name } = this.findUserById(4)
+      this.name = name
     }
   },
   computed: {
@@ -73,19 +82,22 @@ export default {
       // }
 
       // 箭头函数
-      counts: state => state.count,
-      counting: state => state.count,
-      totalCount: state => state.count
+      counts: (state) => state.count,
+      counting: (state) => state.count,
+      totalCount: (state) => state.count
     }),
+
+    ...mapGetters(['getDataByGetters', 'findUserById']),
     showData: function () {
       return this.$store.state.count
     },
-    getNum: function () {
+    getNum () {
       return this.num
     }
   },
   mounted: function () {
     this.numPlus()
+    this.getName()
   }
 }
 </script>
