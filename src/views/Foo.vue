@@ -9,9 +9,7 @@
         <button>我是在实例中通多mapMutation映射到methods方法中直接同步改变的</button>
       </p>
       <p>
-        我是在模板中通过$store.commit直接同步修改的<button
-          @click="$store.commit('add', 1)"
-        >
+        我是在模板中通过$store.commit直接同步修改的<button @click="$store.commit('add', 1)">
           +
         </button>
         <!-- @click="$store.commit('add')" -->

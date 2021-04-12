@@ -25,7 +25,7 @@ export default new Vuex.Store({
     jian ({ commit }) {
       setTimeout(() => {
         commit('jian')
-      }, 3000)
+      }, 1000)
     }
   },
   modules: {},
