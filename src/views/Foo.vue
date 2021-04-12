@@ -5,6 +5,9 @@
       <p @click="addNum">
         <button>我是在实例中通多this.$store.commit('add')直接同步改变的</button>
       </p>
+      <p @click="add(1)">
+        <button>我是在实例中通多mapMutation映射到methods方法中直接同步改变的</button>
+      </p>
       <p>
         我是在模板中通过$store.commit直接同步修改的<button
           @click="$store.commit('add', 1)"
@@ -45,7 +48,7 @@
 
 <script>
 // console.log(this.$store.state.count)
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'foo',
   data () {
@@ -70,7 +73,8 @@ export default {
     getName () {
       const { name } = this.findUserById(4)
       this.name = name
-    }
+    },
+    ...mapMutations(['add'])
   },
   computed: {
     // 展开运算符
@@ -91,6 +95,7 @@ export default {
     showData: function () {
       return this.$store.state.count
     },
+
     getNum () {
       return this.num
     }
