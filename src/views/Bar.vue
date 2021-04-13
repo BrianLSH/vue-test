@@ -18,7 +18,8 @@ export default {
     //   this.$store.dispatch('jian')
     // }
     miniusNum () {
-      this.$store.dispatch('jian')
+      // this.$store.dispatch('jian')
+      this.jian()
     },
     miniusNum1 () {
       this.jian()
