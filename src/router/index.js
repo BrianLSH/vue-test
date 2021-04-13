@@ -8,6 +8,9 @@ import getPic from '../views/GetPic'
 import SlotOne from '../views/slot/SlotOne'
 import Book from '../views/Book'
 import HomePage from '../views/home/homepage'
+import FILTER from '../views/filter'
+import IF from '../views/if/index.vue'
+import DELIVERY from '../views/delivery'
 Vue.use(VueRouter)
 
 const routes = [
@@ -53,6 +56,18 @@ const routes = [
     path: '/homepage',
     name: HomePage,
     component: HomePage
+  }, {
+    path: '/filter',
+    name: 'filter',
+    component: FILTER
+  }, {
+    path: '/if',
+    name: 'if',
+    component: IF
+  }, {
+    path: '/delivery',
+    name: 'delivery',
+    component: DELIVERY
   }
 ]
 
