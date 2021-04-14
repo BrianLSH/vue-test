@@ -11,6 +11,7 @@ import HomePage from '../views/home/homepage'
 import FILTER from '../views/filter'
 import IF from '../views/if/index.vue'
 import DELIVERY from '../views/delivery'
+import EventBus from '../views/event-bus'
 Vue.use(VueRouter)
 
 const routes = [
@@ -68,6 +69,10 @@ const routes = [
     path: '/delivery',
     name: 'delivery',
     component: DELIVERY
+  }, {
+    path: '/eventbus',
+    name: 'eventbus',
+    component: EventBus
   }
 ]
 
