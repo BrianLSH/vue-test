@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input @click="toB" type="button" value="我是a组件,每次传2给b组件">
+    <input @click="toB" type="button" value="加入购物车2件">
   </div>
 </template>
 

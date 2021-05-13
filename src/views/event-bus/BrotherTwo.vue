@@ -1,6 +1,6 @@
 <template>
   <div>
-    b组件的值会累加=====>{{num}}
+    购物车数量=====>{{num}}
   </div>
 </template>
 

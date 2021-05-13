@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>父组件</p>
+    <p>测试一下git</p>
 <brother-one></brother-one>
 
 <brother-two></brother-two>

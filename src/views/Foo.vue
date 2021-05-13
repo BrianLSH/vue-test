@@ -45,7 +45,6 @@
 </template>
 
 <script>
-// console.log(this.$store.state.count)
 import { mapState, mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'foo',
@@ -56,9 +55,6 @@ export default {
     }
   },
   methods: {
-    // addNum: function () {
-    //   this.$store.commit('add', 2)
-    // }
     numPlus: function () {
       setInterval(() => {
         this.num++
