@@ -2,6 +2,7 @@
   <div class="com">
     <h2>Foo 组件</h2>
     <div>
+
       <p @click="addNum">
         <button>我是在实例中通多this.$store.commit('add')直接同步改变的</button>
       </p>

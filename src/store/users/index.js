@@ -1,9 +1,11 @@
+import mutations from './mutations'
+import actions from './actions'
 export default {
   state: {
-    uName: '张三'
+    uName: '张三',
+    UNam: 1
   },
-  mutations: {},
-  actions: {},
+
   getters: {
     getConsole () {
       console.log('来自users模块')
@@ -12,5 +14,8 @@ export default {
       console.log('来自users木块2')
     }
   },
-  namespaced: true
+  namespaced: true,
+  mutations,
+  actions
+
 }

@@ -1,6 +1,8 @@
 <template>
   <div class="com">
     <h2>Bar 组件</h2>
+    <p>助手函数操作user的mutation<button @click="byUserMutationAdd">{{UNam}}</button></p>
+    <p>助手函数操作user的action<button @click="byUserActionMin(10)">{{UNam}}</button></p>
     <p>{{ $store.state.count }}</p>
     <button @click="$store.dispatch('jian')">我不是助手函数-</button>
     <button @click="jian()">助手函数-</button>
@@ -18,7 +20,7 @@
       <p>我是user模块的getter通过----对象方式----...mapGetters({ getConsole: 'users' })获得----------{{getConsole}}</p>
       <p>我是user模块的getter通过----数组字符串方式----...mapGetters('users', ['getConsole2'])获得----------{{getConsole2}}</p>
     </div>
-    </div>
+  </div>
 
 </template>
 
@@ -26,7 +28,8 @@
 import {
   mapActions, mapState,
   createNamespacedHelpers,
-  mapGetters
+  mapGetters,
+  mapMutations
 } from 'vuex'
 const { mapState: mapStateProduct } = createNamespacedHelpers('product')
 export default {
@@ -41,11 +44,13 @@ export default {
     },
     miniusNum1 () {
       this.jian()
-    }
+    },
+    ...mapMutations('users', ['byUserMutationAdd']),
+    ...mapActions('users', ['byUserActionMin'])
 
   },
   computed: {
-    ...mapState('users', ['uName']),
+    ...mapState('users', ['uName', 'UNam']),
     ...mapState('product', ['pName']),
     ...mapStateProduct(['pName', 'pSex']),
     ...mapGetters({

@@ -12,10 +12,9 @@ import FILTER from '../views/filter'
 import IF from '../views/if/index.vue'
 import DELIVERY from '../views/delivery'
 import EventBus from '../views/event-bus'
-<<<<<<< HEAD
+
 import ChangeTime from '../views/time/ChangeTime'
-=======
->>>>>>> bd6834983119d1460aa99f00bbe5d798381e6bb3
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -74,7 +73,7 @@ const routes = [
     name: 'delivery',
     component: DELIVERY
   }, {
-<<<<<<< HEAD
+
     path: '/bus',
     name: 'bus',
     component: EventBus
@@ -82,11 +81,10 @@ const routes = [
     path: '/changetime',
     name: 'ChangeTime',
     component: ChangeTime
-=======
-    path: '/eventbus',
-    name: 'eventbus',
-    component: EventBus
->>>>>>> bd6834983119d1460aa99f00bbe5d798381e6bb3
+    // path: '/eventbus',
+    // name: 'eventbus',
+    // component: EventBus
+
   }
 ]
 
