@@ -60,7 +60,8 @@ const routes = [
     path: '/homepage',
     name: HomePage,
     component: HomePage
-  }, {
+  },
+  {
     path: '/filter',
     name: 'filter',
     component: FILTER
