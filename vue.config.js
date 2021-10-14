@@ -1,4 +1,7 @@
 // vue.config.js
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  configureWebpack: {
+    devtool: 'source-map'
+  }
 }

@@ -2,7 +2,6 @@
   <div class="com">
     <h2>Foo 组件</h2>
     <div>
-
       <p @click="addNum">
         <button>我是在实例中通多this.$store.commit('add')直接同步改变的</button>
       </p>
@@ -52,7 +51,11 @@ export default {
   data () {
     return {
       num: 1,
-      name: ''
+      name: '',
+      debuggerData1: 1,
+      debuggerData2: 2,
+      debuggerData3: 3,
+      debuggerData4: 4,
     }
   },
   methods: {
@@ -96,6 +99,11 @@ export default {
     }
   },
   mounted: function () {
+    let a = this.debuggerData1;
+    let b = this.debuggerData2;
+    let c = this.debuggerData3;
+    let d = this.debuggerData4;
+    console.log(a, b, c, d)
     this.numPlus()
     this.getName()
   }

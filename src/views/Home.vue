@@ -11,17 +11,28 @@
     <hr>
     <Foo />
     <Bar />
+    <div style="border:1px solid red;margin:20px">
+      <h3>路由传参</h3>
+      <p>
+        <Send />
+        <Receive />
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 import Foo from './Foo'
 import Bar from './Bar'
+import Send from './PostData/Send'
+import Receive from './PostData/Receive'
 export default {
   name: 'Home',
   components: {
     Foo,
-    Bar
+    Bar,
+    Send,
+    Receive
   }
 }
 </script>
