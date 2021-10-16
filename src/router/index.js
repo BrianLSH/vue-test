@@ -14,6 +14,7 @@ import DELIVERY from '../views/delivery'
 import EventBus from '../views/event-bus'
 
 import ChangeTime from '../views/time/ChangeTime'
+import Watch from '../views/Watch/Watch.vue'  // 监听器的使用
 
 Vue.use(VueRouter)
 
@@ -86,6 +87,10 @@ const routes = [
     // name: 'eventbus',
     // component: EventBus
 
+  }, {
+    path: '/watch',
+    name: 'Watch',
+    component: Watch
   }
 ]
 

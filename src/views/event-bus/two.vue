@@ -7,7 +7,7 @@
 // import eventBus from '../../assets/js/utils/eventBus.js'
 
 export default {
-  name: 'two',
+  name: 'Two',
   data () {
     return {
       Nm: ''
@@ -15,12 +15,12 @@ export default {
   },
   // methods: {},
   mounted: {
-    // sendToTwo () {
-    // this.$eventBus.$on('sendToTwo', (msg) => {
-    //   console.log(num)
-    //   this.Nm = num
-    // })
-    // }
+    sendToTwo () {
+      this.$eventBus.$on('sendToTwo', (msg) => {
+        console.log(num)
+        this.Nm = num
+      })
+    }
   }
 
 }

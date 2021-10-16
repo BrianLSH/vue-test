@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!--  -->
 <template>
   <div>
@@ -36,32 +36,3 @@ export default {
 </script>
 
 <style lang='stylus' scoped></style>
-=======
-<template>
-  <div>
-    <p>父组件</p>
-    <p>测试一下git</p>
-<brother-one></brother-one>
-
-<brother-two></brother-two>
-  </div>
-</template>
-
-<script>
-import BrotherOne from './BrotherOne.vue'
-import BrotherTwo from './BrotherTwo.vue'
-
-export default {
-  name: 'eventbus',
-  components: {
-    BrotherOne,
-    BrotherTwo
-  }
-
-}
-</script>
-
-<style>
-
-</style>
->>>>>>> bd6834983119d1460aa99f00bbe5d798381e6bb3

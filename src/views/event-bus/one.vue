@@ -13,7 +13,7 @@ export default {
   num: 2,
   data () {
     return {
-      name: 'one'
+      name: 'One'
     }
   },
   methods: {
