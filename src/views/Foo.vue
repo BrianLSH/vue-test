@@ -29,7 +29,8 @@
         <p>我是通多mapGetter获取的=====》{{ getDataByGetters }}</p>
         <p>我是通多mapGetter获取的=====》{{ findUserById(1) }}</p>
         <p>我是通多Getter获取的=====》{{ $store.getters.findUserById(2) }}</p>
-        <p>通过让 getter 返回一个函数，来实现给 getter 传参在你对 store 里的数组进行查询时非常有用》{{ name }}</p>
+        <p>通过让 getter 返回一个函数，来实现给 getter 传参在你对 store
+          里的数组进行查询时非常有用》{{ name }}</p>
       </div>
       <div>
         <p>我是通多mapState数组获取的 映射到计算属性=====》{{ counts }}</p>
@@ -67,6 +68,7 @@ export default {
 
     addNum () {
       this.$store.commit('add', 2)
+      console.log(this.getDataByGetters);
     },
     getName () {
       const { name } = this.findUserById(4)
